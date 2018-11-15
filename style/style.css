@@ -11,6 +11,7 @@ body {
   margin-top:100px;
 }
 
+
 body h1{
      font-weight: 300;
      margin: 20px 30px;
@@ -19,6 +20,7 @@ body h1{
 
 .site-title{
   font-family:"Press Start 2P", sans-serif;
+  color: #3f2d21;
 }
 
 .main-header{
@@ -31,14 +33,29 @@ body h1{
    width: 100%;
    background: rgba(255, 255, 255,.9);
    top: 0px;
+
+}
+
+#main-header::after{
+  content: "";
+  display: none;
+  width:10px;
+  height: 40px;
+  background: #fff;
+  position: absolute;
+  z-index: 6;
+
 }
 
 
 
 #top-stories{
-  width: 1000px;
+
+  width: 1100px;
   margin: auto;
   margin-top:20px;
+
+
 }
 
 a:hover{
@@ -55,8 +72,14 @@ article{
   padding: 10px;
   margin: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 6);
+  transition: box-shadow 50ms, background 1s;
 
 
+  }
+
+  article:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 6);
+    background: #aaa;
   }
 
 article img{
@@ -78,8 +101,9 @@ h3{
 p{
 
   letter-spacing: 2px;
-  color: #000;
+  color: #00f;
   text-indent: 1px;
+
 }
 
 
@@ -121,6 +145,15 @@ p{
    border: 1px solid transparent;
 }
 
+#search-btn{
+	width:10%;
+	margin: 10px;
+	display:block;
+	
+}
+
+
+
 
 
 .my-input:focus{
@@ -134,4 +167,12 @@ p{
 
 article:active{
   opacity: .4;
+}
+
+
+
+.my-txt {
+  max-height: 200px;
+  overflow: scroll;
+
 }
